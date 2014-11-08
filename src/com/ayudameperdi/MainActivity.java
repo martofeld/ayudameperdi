@@ -8,7 +8,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -16,10 +15,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
@@ -29,6 +27,7 @@ public class MainActivity extends ActionBarActivity {
 	private Geoloc mGeoloc;
 	private DataBase mDataBase;
 	private ActionBar mActionBar;
+	private ImageView mImageView;
 	public boolean recived = false;
 	
     @Override
@@ -80,6 +79,8 @@ public class MainActivity extends ActionBarActivity {
 		help.setMaxHeight(300);
 		help.setMaxWidth(300);
     	help.setOnTouchListener(helpOnTouchListener);
+    	mImageView = (ImageView)findViewById(R.id.imgResponse);
+    	mImageView.setImageDrawable(null);
     	mActionBar.show();
     }
     
@@ -100,6 +101,7 @@ public class MainActivity extends ActionBarActivity {
     		mTextMessage.sendMessage("Me perdi en " +direccion);
     	}
     	Toast.makeText(this, "MENSAJES ENVIADOS", Toast.LENGTH_LONG).show();
+    	mImageView.setImageResource(R.drawable.tick);
     }
     
     private PendingIntent getPi(){
@@ -115,6 +117,7 @@ public class MainActivity extends ActionBarActivity {
 	       @Override
 	      public void onReceive(Context context, Intent intent) {
 	    	   Toast.makeText(getApplicationContext(), "No te preocupes, el mensaje fue enviado con exito. Quedate donde estas.".toUpperCase(), Toast.LENGTH_LONG).show();
+	    	   mImageView.setImageResource(R.drawable.dostick);
 	      }
       }, new IntentFilter(DELIVERED));
      
@@ -138,6 +141,7 @@ public class MainActivity extends ActionBarActivity {
 					help.setAdjustViewBounds(true);
 					help.setMaxHeight(300);
 					help.setMaxWidth(300);
+					mImageView.setImageDrawable(null);
 					return true;				
 			}
 			return false;

@@ -995,15 +995,17 @@ containing a value of this type.
         public static final int button_up=0x7f020062;
         public static final int config_activity=0x7f020063;
         public static final int config_layout=0x7f020064;
-        public static final int gears=0x7f020065;
-        public static final int hexa_action_bar=0x7f020066;
-        public static final int ic_launcher=0x7f020067;
-        public static final int icon=0x7f020068;
-        public static final int info=0x7f020069;
-        public static final int load_activity=0x7f02006a;
-        public static final int loading=0x7f02006b;
-        public static final int main_activity=0x7f02006c;
-        public static final int options_gear=0x7f02006d;
+        public static final int dostick=0x7f020065;
+        public static final int gears=0x7f020066;
+        public static final int hexa_action_bar=0x7f020067;
+        public static final int ic_launcher=0x7f020068;
+        public static final int icon=0x7f020069;
+        public static final int info=0x7f02006a;
+        public static final int load_activity=0x7f02006b;
+        public static final int loading=0x7f02006c;
+        public static final int main_activity=0x7f02006d;
+        public static final int options_gear=0x7f02006e;
+        public static final int tick=0x7f02006f;
     }
     public static final class id {
         public static final int about=0x7f050049;
@@ -1040,6 +1042,7 @@ containing a value of this type.
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
         public static final int imgLoader=0x7f050043;
+        public static final int imgResponse=0x7f050045;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
         public static final int lvContactos=0x7f050042;
@@ -1077,7 +1080,6 @@ containing a value of this type.
         public static final int txtListNumero=0x7f050047;
         public static final int txtNombre=0x7f05003e;
         public static final int txtNumero=0x7f050040;
-        public static final int txtResponse=0x7f050045;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
         public static final int withText=0x7f05000c;
