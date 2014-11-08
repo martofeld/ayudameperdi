@@ -76,6 +76,9 @@ public class MainActivity extends ActionBarActivity {
     	setContentView(R.layout.activity_main);
     	help = (ImageButton) findViewById(R.id.btnHelp);
     	help.setImageResource(R.drawable.button_up);
+		help.setAdjustViewBounds(true);
+		help.setMaxHeight(300);
+		help.setMaxWidth(300);
     	help.setOnTouchListener(helpOnTouchListener);
     	mActionBar.show();
     }
@@ -125,10 +128,16 @@ public class MainActivity extends ActionBarActivity {
 			{
 				case MotionEvent.ACTION_UP:
 					help.setImageResource(R.drawable.button_up);
+					help.setAdjustViewBounds(true);
+					help.setMaxHeight(300);
+					help.setMaxWidth(300);
 					sendMessage();		
 					return true;
 				case MotionEvent.ACTION_DOWN:
 					help.setImageResource(R.drawable.button_down);
+					help.setAdjustViewBounds(true);
+					help.setMaxHeight(300);
+					help.setMaxWidth(300);
 					return true;				
 			}
 			return false;
