@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:screenOrientation="portrait" >
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="19dp"
+            android:text="Agregar Contacto"
+            android:layout_marginTop="22dp"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="148dp" >
+
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:layout_toLeftOf="@+id/btnAdd"
+                android:ems="10"
+                android:textColor="#ffffff"
+                android:textColorHint="#50ffffff"
+                android:hint="Nombre" />
+
+            <EditText
+                android:id="@+id/txtNumero"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/txtNombre"
+                android:layout_marginTop="16dp"
+                android:layout_toLeftOf="@+id/btnAdd"
+                android:ems="10"
+                android:hint="Telefono"
+                android:textColor="#ffffff"
+                android:textColorHint="#50ffffff"
+                android:inputType="phone" />
+
+            <ImageButton
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txtNumero"
+                android:layout_alignParentRight="true"
+                android:background="#00acffcc"
+                android:onClick="addContact"
+                android:src="@drawable/add_button" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtActuales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            
+            android:layout_marginBottom="10dp"
+            android:text="Contactos Actuales"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+    <ListView
+        android:id="@+id/lvContactos"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" 
+        android:textColor="#ffffff">
+    </ListView>
+
+</LinearLayout>

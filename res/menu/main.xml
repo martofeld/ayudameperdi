@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ayudameperdi.MainActivity" >
+
+        <item
+        android:id="@+id/about"
+        android:icon="@drawable/info"
+        android:title="about"
+        app:showAsAction="ifRoom"/>
+    
+    <item
+        android:id="@+id/options"
+        android:icon="@drawable/gears"
+        android:title="Options"
+        app:showAsAction="ifRoom"/>
+
+</menu>
