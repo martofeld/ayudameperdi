@@ -69,6 +69,10 @@ public class ConfigActivity extends Activity{
     public void addContact(View v){
     	String name = ((EditText)findViewById(R.id.txtNombre)).getText().toString();
     	String phone = ((EditText)findViewById(R.id.txtNumero)).getText().toString();
+    	if(name.equals("") || phone.equals("")){
+    		Toast.makeText(this, "Hay campos vacios.", Toast.LENGTH_SHORT).show();
+    		return;
+    	}
     	contactos.add(new Contact(name, phone));
     	Toast.makeText(this, "Contacto Agregado", Toast.LENGTH_SHORT).show();
     	
